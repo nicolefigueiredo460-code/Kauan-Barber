@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia em São Carlos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h2 {
+            border-left: 4px solid var(--gold);
+            padding-left: 10px;
+            margin-top: 30px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        /* Estilização das Tabelas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+
+        th {
+            background-color: #252525;
+            color: var(--gold);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        td:last-child {
+            font-weight: bold;
+            color: var(--gold);
+            text-align: right;
+        }
+
+        /* Galeria de Fotos */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Rodapé e Endereço */
+        .info-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 8px;
+        }
+
+        .address {
+            color: #bbb;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Botão Flutuante do WhatsApp */
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #25d366;
+            color: white;
+            padding: 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            gap: 10px;
+            transition: background 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1ebe57;
+        }
+
+        @media (max-width: 400px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 40px;">
+            <h1 style="color: var(--gold); margin-bottom: 5px;">✂️ Kauan Barber
+            <p style="color: #888;">Estilo e tradição em São Carlos</p>
+        </header>
+
+        <h2>💈 Tabela de Preços</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Serviço</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Corte</td><td>R$ 30</td></tr>
+                <tr><td>Barba</td><td>R$ 20</td></tr>
+                <tr><td>Sobrancelha</td><td>R$ 5</td></tr>
+                <tr><td><strong>Corte + Barba</strong></td><td><strong>R$ 45</strong></td></tr>
+            </tbody>
+        </table>
+
+        <h2>💎 Serviços Químicos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Serviço</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Alisamento</td><td>R$ 15</td></tr>
+                <tr><td>Platinado</td><td>R$ 110</td></tr>
+                <tr><td>Luzes</td><td>R$ 90</td></tr>
+                <tr><td>Pigmentação</td><td>R$ 20</td></tr>
+            </tbody>
+        </table>
+
+        <section>
+            <h2>🔥 Trabalhos Recentes</h2>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033" alt="Corte 1">
+                <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a" alt="Corte 2">
+                <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70" alt="Corte 3">
+                <img src="https://images.unsplash.com/photo-1605497787865-6c9a1c0df7b1" alt="Corte 4">
+            </div>
+        </section>
+
+        <div class="info-section">
+            <p class="address">
+                <i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> 
+                São Carlos - SP <br>
+                Atendimento com horário marcado.
+            </p>
+
+            <a href="https://wa.me/5516993961340" class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp fa-lg"></i>
+                AGENDAR PELO WHATSAPP
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
